@@ -1,0 +1,52 @@
+(venv) C:\Users\felix\OneDrive\Dokumente\Python Projects\audio_percentage\uis-rnn-master>python demoImplementation.
+py --train_iteration=100 -l=0.001
+<numpy.lib.npyio.NpzFile object at 0x00000144B0CBDD90>
+Warning: transition_bias cannot be correctly estimated from a concatenated sequence; train_sequences will be treate
+d as a single sequence. This can lead to inaccurate estimation of transition_bias. Please, consider estimating tran
+sition_bias before concatenating the sequences and passing it as argument.
+Iter: 0         Training Loss: nan
+    Negative Log Likelihood: 10.3765    Sigma2 Prior: nan       Regularization: 0.0006
+Iter: 10        Training Loss: nan
+    Negative Log Likelihood: nan        Sigma2 Prior: nan       Regularization: nan
+Iter: 20        Training Loss: nan
+    Negative Log Likelihood: nan        Sigma2 Prior: nan       Regularization: nan
+Iter: 30        Training Loss: nan
+    Negative Log Likelihood: nan        Sigma2 Prior: nan       Regularization: nan
+Iter: 40        Training Loss: nan
+    Negative Log Likelihood: nan        Sigma2 Prior: nan       Regularization: nan
+Iter: 50        Training Loss: nan
+    Negative Log Likelihood: nan        Sigma2 Prior: nan       Regularization: nan
+Iter: 60        Training Loss: nan
+    Negative Log Likelihood: nan        Sigma2 Prior: nan       Regularization: nan
+Iter: 70        Training Loss: nan
+    Negative Log Likelihood: nan        Sigma2 Prior: nan       Regularization: nan
+Iter: 80        Training Loss: nan
+    Negative Log Likelihood: nan        Sigma2 Prior: nan       Regularization: nan
+Iter: 90        Training Loss: nan
+    Negative Log Likelihood: nan        Sigma2 Prior: nan       Regularization: nan
+Iter: 99        Training Loss: nan
+    Negative Log Likelihood: nan        Sigma2 Prior: nan       Regularization: nan
+Done training with 100 iterations
+Traceback (most recent call last):
+  File "demoImplementation.py", line 89, in <module>
+    main()
+  File "demoImplementation.py", line 86, in main
+    diarization_experiment(model_args, training_args, inference_args)
+  File "demoImplementation.py", line 67, in diarization_experiment
+    predicted_cluster_id = model.predict(test_sequence, inference_args)
+  File "C:\Users\felix\OneDrive\Dokumente\Python Projects\audio_percentage\uis-rnn-master\uisrnn\uisrnn.py", line 5
+87, in predict
+    return [self.predict_single(test_sequence, args)
+  File "C:\Users\felix\OneDrive\Dokumente\Python Projects\audio_percentage\uis-rnn-master\uisrnn\uisrnn.py", line 5
+87, in <listcomp>
+  File "C:\Users\felix\OneDrive\Dokumente\Python Projects\audi
+o_percentage\uis-rnn-master\uisrnn\uisrnn.py", line 587, in pr
+edict
+    return [self.predict_single(test_sequence, args)
+  File "C:\Users\felix\OneDrive\Dokumente\Python Projects\audi
+o_percentage\uis-rnn-master\uisrnn\uisrnn.py", line 587, in <l
+istcomp>
+    return [self.predict_single(test_sequence, args)
+ 512, in predict_single
+    raise TypeError('test_sequence should be a numpy array of float type.')
+TypeError: test_sequence should be a numpy array of float type.
